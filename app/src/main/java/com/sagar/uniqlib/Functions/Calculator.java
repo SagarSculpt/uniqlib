@@ -31,6 +31,21 @@ public class Calculator {
         return number1 + number2;
     }
 
+    public double subNumber(double number1, double number2) {
+        return number1 - number2;
+    }
+
+    public double mulNumber(double number1, double number2) {
+        return number1 * number2;
+    }
+
+    public double divNumber(double number1, double number2) {
+        if(number2==0){
+            throw new IllegalArgumentException("Cannot device by zero");
+        }
+        return number1 / number2;
+    }
+
     public void sendRequest(Context context) {
         JsonObjectRequest mJsonObjectRequest = new JsonObjectRequest(GET, URL, null, new Response.Listener<JSONObject>() {
             @Override
