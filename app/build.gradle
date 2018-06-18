@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'maven-publish'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.sagarsculpt.uniqlib'
+group = 'com.github.sagarsculpt.development'
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -28,6 +28,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.android.volley:volley:1.1.0'
+
+    implementation 'com.twilio:video-android:2.1.0'
 }
 
 task deleteJar(type: Delete) {
