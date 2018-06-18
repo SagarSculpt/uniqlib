@@ -17,12 +17,12 @@ import static com.android.volley.Request.Method.GET;
  */
 
 public class Calculator {
+    private static Calculator mInstance;
     private String URL = "http://services.groupkt.com/country/get/all";
-    private Calculator mInstance;
 
-    public synchronized Calculator getmInstance() {
+    public static synchronized Calculator getmInstance() {
         if (mInstance == null) {
-            this.mInstance = new Calculator();
+            mInstance = new Calculator();
         }
         return mInstance;
     }
