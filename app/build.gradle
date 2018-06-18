@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'maven-publish'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.sagarsculpt.uniqlib'
+group = 'com.github.sagarsculpt.development'
 android {
     compileSdkVersion 27
     defaultConfig {
