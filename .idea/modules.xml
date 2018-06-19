@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/uniqlib.iml" filepath="$PROJECT_DIR$/uniqlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/uniqlib-example/uniqlib-example.iml" filepath="$PROJECT_DIR$/uniqlib-example/uniqlib-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unique-lib/unique-lib.iml" filepath="$PROJECT_DIR$/unique-lib/unique-lib.iml" />
     </modules>
   </component>
 </project>

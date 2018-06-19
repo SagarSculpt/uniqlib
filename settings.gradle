@@ -1,1 +1,1 @@
-include ':app', ':uniqlib-example'
+include ':unique-lib', ':uniqlib-example'
