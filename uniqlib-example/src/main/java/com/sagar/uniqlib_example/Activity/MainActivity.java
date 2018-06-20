@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.sagar.uniqlib.Functions.Calculator;
 import com.sagar.uniqlib.Interface.onResponse;
-import com.sagar.uniqlib.ResModels.ServerResponse;
+import com.sagar.uniqlib.Utils.MySingleton;
 import com.sagar.uniqlib_example.R;
 
 public class MainActivity extends AppCompatActivity implements onResponse {
@@ -26,13 +26,16 @@ public class MainActivity extends AppCompatActivity implements onResponse {
         }
 
         double resultAdd = Calculator.getmInstance().addNumber(2.5, 4.8);
+        Log.v("ResultAdd", "" + resultAdd);
         double resultMul = Calculator.getmInstance().mulNumber(2.5, 4.8);
+        Log.v("ResultMul", "" + resultMul);
         double resultSub = Calculator.getmInstance().subNumber(2.5, 4.8);
+        Log.v("ResultSub", "" + resultSub);
     }
 
     @Override
-    public void onSuccess(ServerResponse serverResponse) {
-        Log.v("Server_response::->", "");
+    public void onSuccess(String serverResponse) {
+        Log.v("Server_response::->", serverResponse);
     }
 
     @Override

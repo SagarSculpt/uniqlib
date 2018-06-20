@@ -28,8 +28,6 @@ public class Calculator {
     private GsonBuilder gsonBuilder;
 
 //    private String URL = "http://services.groupkt.com/country/get/all";
-//    private String URL = "https://astrocricket.000webhostapp.com/mydemo/demoJson.json";
-//    private String URL = "https://astrocricket.000webhostapp.com/mydemo/printjson.php";
 
     private String URL = "https://saagars.000webhostapp.com/MyUpload/demoJson.json";
     private ServerResponse serverResponse;
@@ -74,9 +72,11 @@ public class Calculator {
             public void onResponse(JSONObject response) {
                 String _response = response.toString();
                 serverResponse = gson.fromJson(_response, ServerResponse.class);
-                mOnResponse.onSuccess(serverResponse);
 
                 String jsonString = gson.toJson(serverResponse, ServerResponse.class);
+
+                mOnResponse.onSuccess(jsonString);
+
                 Log.v("Server_Response::->", response.toString());
             }
         }, new Response.ErrorListener() {
