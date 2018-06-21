@@ -18,6 +18,21 @@ android {
     }
 }
 
+def coreAarFile = file('build/unique-lib.aar')
+artifacts {
+    archives coreAarFile
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "https://github.com/SagarSculpt/uniqlib.git")
+            pom.groupId = 'com.unique.lib'
+            pom.artifactId = 'unique-lib'
+            pom.version = '0.1.0'
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -32,16 +47,3 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.5'
 }
-
-task deleteJar(type: Delete) {
-    delete 'libs/jars/uniqlib.jar'
-}
-
-task createJar(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('libs/jars/')
-    include('classes.jar')
-    rename('classes.jar', 'uniqlib.jar')
-}
-
-createJar.dependsOn(deleteJar, build)
