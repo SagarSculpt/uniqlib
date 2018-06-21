@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.sagar.uniqlib.Functions.Calculator;
 import com.sagar.uniqlib.Interface.onResponse;
-import com.sagar.uniqlib.Utils.MySingleton;
 import com.sagar.uniqlib_example.R;
 
 public class MainActivity extends AppCompatActivity implements onResponse {

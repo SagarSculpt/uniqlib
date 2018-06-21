@@ -77,7 +77,7 @@ public class Calculator {
 
                 mOnResponse.onSuccess(jsonString);
 
-                Log.v("Server_Response::->", response.toString());
+                Log.v("Server_Response::->", jsonString);
             }
         }, new Response.ErrorListener() {
             @Override
